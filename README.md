@@ -9,3 +9,5 @@ The menu should also change the HTML it displays depending on the logged in stat
 Add a form that will add a new resource via your API.
 
 Add a form that will update the values of a resource via your API.
+
+The items on your home page should link to a details page if the user is not logged in, and the edit page if the user is logged in.

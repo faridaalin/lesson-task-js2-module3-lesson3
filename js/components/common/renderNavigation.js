@@ -1,10 +1,10 @@
-import { getToStorage, userKey } from "../storage.js";
+import { getFromStorage, userKey } from "../storage.js";
 
 const renderDynamicNavigation = () => {
   const { pathname } = document.location;
 
   let activeClass;
-  const user = getToStorage(userKey);
+  const user = getFromStorage(userKey);
 
   const loggedIn =
     user.length === 0
@@ -20,12 +20,12 @@ const renderDynamicNavigation = () => {
     <a class="nav-link" href="./add.html">Add hotel</a>
     </li>
     `;
-  console.log(loggedIn);
 
   const dynamicMenu = document.querySelector(".dynamicMenu");
   dynamicMenu.innerHTML = `<ul class="navbar-nav w-100">
                                     <li class="nav-item ${(activeClass =
-                                      pathname === "/index.html"
+                                      pathname === "/index.html" ||
+                                      pathname === "/"
                                         ? "active"
                                         : "")}">
                                         <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>

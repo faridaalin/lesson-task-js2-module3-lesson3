@@ -3,7 +3,7 @@ import displaMessage from "./components/common/displayMessage.js";
 import BASE_URL from "./components/api.js";
 import {
   saveToStorage,
-  getToStorage,
+  getFromStorage,
   userKey,
   token,
 } from "./components/storage.js";

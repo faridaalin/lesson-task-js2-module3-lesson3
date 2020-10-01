@@ -7,5 +7,5 @@ export const saveToStorage = (key, value) => {
 export const getToStorage = (key) => {
   const value = localStorage.getItem(key);
 
-  return !value ? [] : JSON.parse(value);
+  !value ? [] : JSON.parse(value);
 };

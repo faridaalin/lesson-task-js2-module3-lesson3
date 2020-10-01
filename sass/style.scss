@@ -53,4 +53,10 @@ $input-bg: #FFFFFF;
     }
 }
 
-.bg-img--hotel {}
+.hideForm {
+    display: none;
+}
+
+textarea.form-control {
+    height: 200px;
+}

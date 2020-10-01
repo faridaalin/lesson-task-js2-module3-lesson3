@@ -38,7 +38,7 @@ const renderHotels = (hotels) => {
 
     container.innerHTML += `<div class="col-sm">
                                   <div class="card border-0 rounded mt-4" style="width: 18rem;">
-                                      <a href="hotel.html?id=${hotel.id}">
+                                      <a href="edit.html?id=${hotel.id}">
                                       ${imageContainer}
                                       </a>
 

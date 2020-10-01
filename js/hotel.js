@@ -6,11 +6,15 @@ renderDynamicNavigation();
 const query = document.location.search;
 const params = new URLSearchParams(query);
 const id = params.get("id");
-const hotelUrl = `${BASE_URL}/hotels/${id}`;
+
+if (!id) {
+  document.location.href = "/index.html";
+}
+const URL = `${BASE_URL}/hotels/${id}`;
 
 (async function getHotels() {
   try {
-    const resp = await fetch(hotelUrl);
+    const resp = await fetch(URL);
     const hotel = await resp.json();
     renderHotel(hotel);
   } catch (error) {

@@ -23,7 +23,12 @@ const renderHotel = (hotel) => {
   const container = document.querySelector(".container");
   const bgImage = document.querySelector(".hotel-bg");
 
-  bgImage.style.backgroundImage = `url(${BASE_URL}${hotel.images[0].url})`;
+  const imageUrl =
+    hotel.images.length === 0
+      ? `https://via.placeholder.com/200x100.png`
+      : `${BASE_URL}${hotel.images[0].url}`;
+
+  bgImage.style.backgroundImage = `url(${imageUrl})`;
 
   container.innerHTML = ` <div class="col-sm">
                               <h1>${hotel.name}</h1>

@@ -34,7 +34,7 @@ const renderHotels = (hotels) => {
       </div> `;
     }
 
-    let categoryName =
+    const categoryName =
       hotel.categories.length === 0 ? "Unknown" : `${hotel.categories[0].name}`;
 
     container.innerHTML += `<div class="col-sm">

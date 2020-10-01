@@ -1,8 +1,7 @@
 import BASE_URL from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
-import renderDynamicNavigation, {
-  pathname,
-} from "./components/common/renderNavigation.js";
+import renderDynamicNavigation from "./components/common/renderNavigation.js";
+renderDynamicNavigation();
 
 const hotels_Url = `${BASE_URL}/hotels`;
 
@@ -52,5 +51,3 @@ const renderHotels = (hotels) => {
                               </div>`;
   });
 };
-
-renderDynamicNavigation(pathname);

@@ -1,8 +1,7 @@
 import BASE_URL from "./components/api.js";
 import displayMessage from "./components/common/displayMessage.js";
-import renderDynamicNavigation, {
-  pathname,
-} from "./components/common/renderNavigation.js";
+import renderDynamicNavigation from "./components/common/renderNavigation.js";
+renderDynamicNavigation();
 
 const query = document.location.search;
 const params = new URLSearchParams(query);
@@ -35,5 +34,3 @@ const renderHotel = (hotel) => {
                               <p>${hotel.description}</p>
                               </div>`;
 };
-
-renderDynamicNavigation(pathname);

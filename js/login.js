@@ -48,11 +48,6 @@ async function doLogin(username, password) {
     const data = await resp.json();
     console.log(data);
     if (data.user) {
-      displaMessage(
-        "alert-success",
-        "Successfully logged in ",
-        ".messageContainer"
-      );
       location.href = "index.html";
       saveToStorage(userKey, data.user);
       saveToStorage(token, data.jwt);
